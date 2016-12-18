@@ -31,16 +31,29 @@
 | exceptions.$num.code  | Long      | 异常错误码  |
 | exceptions.$num.file  | Long      | 异常错误信息 |
 | exceptions.$num.message | string  | 异常详情     |
-| performance       | Node          |             |
+| performance       | Node          | 性能数据   |
 | preformance.statistics | Array    | 性能统计   |
 | preformance.statistics.nested_depth | Long | 最大嵌套深度|
 | preformance.statistics.method_execution | Long | 方法总运行个数|
-| preformance.statistics.call_time | Long  |总运行时间
+| preformance.statistics.runtime | Long  |总运行时间
 | preformance.statistics.memory_usage |  Long | 总内存调用
 | preformance.statistics.compiled_files | Long | 总编译文件个数|
 | preformance.statistics.compiled_files_time | Long| 编译文件总运行时间|
 | preformance.statistics.gc_runs| Long | gc 回收总运行次数|
 | preformance.statistics.gc_collected| Long | gc 回收总收集次数|
-
-
-
+| stacks           | Node           |        |
+| stacks.$num      | Array          | 堆栈数据 |
+| stacks.$num.id   | Long           | 节点ID  |
+| stacks.$num.method_name | String  | 方法名称 |
+| stacks.$num.memory_usage| Long    | 内存占用 |
+| stacks.$num.params| Array         | 参数数据 |
+| stacks.$num.params_count | Long   | 参数总数 |
+| stacks.$num.resource_id  | Long   | 资源实例  |
+| resources        | Node           |          |
+| resources.$num   | Array          | 资源数据  |
+| resources.$num.module_name | String |资源模块名称|
+| resources.$num.host  | String     | 资源主机地址|
+| resources.$num.port  | Long       | 资源端口   |
+| extends          | Node           | 扩展数据   |
+| extends.user     | Array          | 扩展用户数据 |
+| extends.end_to_end | Array        | 扩展端到端数据 |
