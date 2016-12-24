@@ -15,6 +15,8 @@
 | request.uri       | String        | 请求URI    |
 | request.method    | String        | 请求方法    |
 | request.ip        | String        | 请求Ip     |
+| request.cookie    | Array         | 是否抓取COOKIE|
+| request.post      | Array         | 是否抓去POST|
 | response          | Node          |           |
 | response.type     | String        | 响应数据类型|
 | response.status   | String        | 响应状态码  |
@@ -44,11 +46,14 @@
 | stacks           | Node           |        |
 | stacks.$num      | Array          | 堆栈数据 |
 | stacks.$num.id   | Long           | 节点ID  |
+| stacks.$num.start_time| Long      | 开始时间 |
+| stacks.$num.end_time  | Long      | 结束时间 |
+| stacks.$num.call_time | Long      | 调用时间 |
 | stacks.$num.method_name | String  | 方法名称 |
 | stacks.$num.memory_usage| Long    | 内存占用 |
 | stacks.$num.params| Array         | 参数数据 |
 | stacks.$num.params_count | Long   | 参数总数 |
-| stacks.$num.resource_id  | Long   | 资源实例  |
+| stacks.$num.resource_id  | Long   | 资源实例 |
 | resources        | Node           |          |
 | resources.$num   | Array          | 资源数据  |
 | resources.$num.module_name | String |资源模块名称|
@@ -57,3 +62,6 @@
 | extends          | Node           | 扩展数据   |
 | extends.user     | Array          | 扩展用户数据 |
 | extends.end_to_end | Array        | 扩展端到端数据 |
+
+
+
